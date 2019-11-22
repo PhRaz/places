@@ -8,7 +8,7 @@
             padding-left: 10px;
             border-radius: 4px;
             border: 1px solid rgb(186, 178, 178);
-            box-shadow: 0px 0px 12px #EFEFEF;
+            box-shadow: 0 0 12px #EFEFEF;
         }
     </style>
     <script
@@ -44,8 +44,8 @@
     cityAutocomplete.addListener('place_changed', cityChanged);
     countryAutocomplete.addListener('place_changed', countryChanged);
 
-    cityAutocomplete.setFields(['address_component']);
-    countryAutocomplete.setFields(['address_component']);
+    cityAutocomplete.setFields(['address_components']);
+    countryAutocomplete.setFields(['address_components']);
 
     function cityChanged() {
         place = cityAutocomplete.getPlace();
